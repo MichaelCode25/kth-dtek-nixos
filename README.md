@@ -23,6 +23,12 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6010", MODE="0666"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="09fb", ATTRS{idProduct}=="6810", MODE="0666"
 ```
 
+Step 3: Restart your system. Now, try plugging in the USB cable connected to the DTEK-V board into your computer and type:
+```
+sudo dmesg | tail
+```
+and you should see the USB being detected.
+
 ### Using devshell
 The devshell can be entered with: `nix develop "github:MichaelCode25/kth-dtek-nixos"`.
 
